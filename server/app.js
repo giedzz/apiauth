@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 
 
 if (!process.env.NODE_ENV === 'test'){
-    mongoose.connect('mongodb://localhost/APIauthenticationTEST', { useNewUrlParser: true });
+    mongoose.connect('mongodb://localhost/APIauthentication', { useNewUrlParser: true });
 }else {
     mongoose.connect('mongodb://localhost/APIauthenticationTEST', { useNewUrlParser: true });
 }
