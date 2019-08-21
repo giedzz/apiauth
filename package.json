@@ -6,7 +6,7 @@
   "scripts": {
     "server-dev": "nodemon server/index.js",
     "client-dev": "npm run start --prefix client",
-    "start-dev": "concurrently \"npm run server-dev\" \"npm run client-dev\"",
+    "start-dev": "concurrently \"npm run server-dev\" \"set HTTPS=true&&npm run client-dev\"",
     "test": "cross-env NODE_ENV=test mocha --timeout 5000 __tests__/server/**/*.test.js",
     "report": "cross-env NODE_ENV=test nyc --reporter=lcov mocha --timeout 5000 __tests__/server/**/*.test.js",
     "text_report": "cross-env NODE_ENV=test nyc --reporter=text-summary mocha --timeout 5000 __tests__/server/**/*.test.js",
